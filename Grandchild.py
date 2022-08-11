@@ -11,7 +11,7 @@ class Grandchild:
 
     def __init__(self, name, age):
 
-        self._name = name
+        self.name = name
 
         self.age = age
 
@@ -72,7 +72,7 @@ def main():
 
     print(f"\nIs Simon older than James? That is {Simon.isOlder(James)}")
 
-    # You can create a list of Class objects
+    # a list of Class objects
 
     manyGrandChildren = []
 
@@ -80,14 +80,11 @@ def main():
 
     manyGrandChildren.append(Simon)
 
-    # Create 100 GrandChild Objects
-
     # Place them in a list and find the average age of the Grandchild Objects.
 
     sumAges = 0
 
     howMany = 10
-    start_time = time.time()
     for i in range(howMany):
         anotheNewGrandchild = Grandchild(howMany, random.randrange(1, 40))
 
@@ -95,13 +92,11 @@ def main():
         '''anotheNewGrandchild.printDetails()'''
 
         sumAges = sumAges + anotheNewGrandchild.age
-    end_time = time.time()
 
     average = sumAges / howMany
 
-    print("Average age of the Grandchildren", round(average, 2))
+    print("\n\nAverage age of the Grandchildren", round(average, 2))
 
-    print((end_time - start_time), "seconds")
     print(James)
 
 
